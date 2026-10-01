@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+
+  "name": "Fleeting Jobs",
+
+  "version": "0.1.0",
+
+  "description": "Autofill job applications with Fleeting Jobs.",
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "src/background/index.js",
+    "type": "module"
+  },
+
+  "permissions": ["activeTab"],
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content/index.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
