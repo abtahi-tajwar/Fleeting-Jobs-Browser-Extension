@@ -15,18 +15,11 @@ export type FormFieldType =
 
 export interface DetectedField {
   id: string;
-
   type: FormFieldType;
-
   name: string | null;
-
   label: string | null;
-
   placeholder: string | null;
-
   htmlId: string | null;
-
   selector: string;
-
   value: string | boolean | null;
 }

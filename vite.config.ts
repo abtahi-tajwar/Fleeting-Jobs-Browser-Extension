@@ -9,7 +9,7 @@ const __dirname = fileURLToPath(
 
 export default defineConfig({
   plugins: [react()],
-
+  base: "./",
   build: {
     outDir: "dist",
     emptyOutDir: true,
@@ -18,7 +18,7 @@ export default defineConfig({
       input: {
         popup: resolve(
           __dirname,
-          "src/popup.html"
+          "popup.html"
         ),
 
         background: resolve(

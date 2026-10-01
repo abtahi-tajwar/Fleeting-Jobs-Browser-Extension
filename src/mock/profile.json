@@ -1,0 +1,399 @@
+{
+  "personal": {
+    "firstName": "Abtahi",
+    "lastName": "Tajwar",
+    "fullName": "Abtahi Tajwar",
+    "preferredName": "Abtahi",
+    "email": "abtahitajwar@gmail.com",
+    "phone": null,
+    "location": {
+      "city": "London",
+      "province": "Ontario",
+      "country": "Canada"
+    },
+    "address": null,
+    "postalCode": null,
+    "linkedin": null,
+    "github": null,
+    "portfolio": "https://abtahitajwar.com",
+    "website": "https://abtahitajwar.com"
+  },
+
+  "professional": {
+    "headline": "Software Engineer | Information Security",
+    "yearsOfExperience": 3,
+    "primaryRole": "Software Engineer",
+    "secondaryAreas": [
+      "Full-Stack Development",
+      "Cybersecurity",
+      "Information Security",
+      "IT Support",
+      "Systems Programming",
+      "Web Automation"
+    ],
+    "workAuthorization": {
+      "country": "Canada",
+      "status": null,
+      "requiresSponsorship": null
+    }
+  },
+
+  "employment": [
+    {
+      "company": "TELUS",
+      "employerType": "Dealership",
+      "role": "Sales Representative",
+      "employmentType": "Full-time",
+      "location": "Canada",
+      "startDate": null,
+      "endDate": null,
+      "current": true,
+      "description": "Customer-facing sales role involving customer communication, needs assessment, product knowledge, lead generation and sales."
+    },
+    {
+      "company": "Walmart Canada",
+      "role": "Overnight Associate",
+      "employmentType": "Full-time",
+      "location": "London, Ontario, Canada",
+      "startDate": null,
+      "endDate": null,
+      "current": false,
+      "description": "Overnight retail operations including stocking merchandise, organizing inventory, maintaining aisles and working in a fast-paced physical environment."
+    },
+    {
+      "company": "Alagzoo Software LLC",
+      "role": "Full-Stack Developer",
+      "employmentType": "Full-time",
+      "location": "Bangladesh",
+      "startDate": "2021",
+      "endDate": "2023",
+      "current": false,
+      "description": "Full-stack software development involving modern web applications, frontend development, backend services, APIs and database-driven systems.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        ".NET",
+        "C#",
+        "REST APIs",
+        "PostgreSQL",
+        "Git"
+      ]
+    },
+    {
+      "company": "Xit Bangladesh",
+      "role": "Software Developer",
+      "employmentType": "Full-time",
+      "location": "Bangladesh",
+      "startDate": null,
+      "endDate": null,
+      "current": false,
+      "description": "Software development experience involving web technologies and application development."
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Niagara University",
+      "degree": "Master of Science",
+      "fieldOfStudy": "Information Security & Digital Forensics",
+      "startDate": "2024",
+      "endDate": null,
+      "current": true,
+      "gpa": "3.94/4.00"
+    },
+    {
+      "institution": "American International University-Bangladesh",
+      "degree": "Bachelor of Science",
+      "fieldOfStudy": "Computer Science & Engineering",
+      "startDate": "2017",
+      "endDate": "2021",
+      "current": false,
+      "gpa": "3.89/4.00"
+    }
+  ],
+
+  "skills": {
+    "programmingLanguages": [
+      "JavaScript",
+      "TypeScript",
+      "C#",
+      "Python",
+      "C++",
+      "Java"
+    ],
+    "frontend": [
+      "React",
+      "Next.js",
+      "React Native",
+      "SvelteKit",
+      "HTML",
+      "CSS"
+    ],
+    "backend": [
+      ".NET",
+      "ASP.NET Core",
+      "Spring Boot",
+      "Node.js",
+      "FastAPI",
+      "REST APIs"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "SQLite",
+      "Redis"
+    ],
+    "devops": [
+      "Docker",
+      "Nginx",
+      "Git",
+      "Linux",
+      "Oracle Cloud",
+      "Hetzner"
+    ],
+    "cloud": [
+      "AWS",
+      "Azure"
+    ],
+    "security": [
+      "Splunk",
+      "SIEM",
+      "SPL",
+      "Kali Linux",
+      "pfSense",
+      "Snort",
+      "OpenVPN",
+      "Digital Forensics",
+      "Threat Modeling",
+      "Secure Coding"
+    ],
+    "systems": [
+      "Linux",
+      "Networking",
+      "TCP/IP",
+      "DNS",
+      "DHCP",
+      "SSH",
+      "System Programming"
+    ],
+    "tools": [
+      "Git",
+      "Jira",
+      "Azure DevOps",
+      "VirtualBox",
+      "VMware",
+      "Microsoft 365"
+    ],
+    "methodologies": [
+      "Agile",
+      "Scrum",
+      "Software Development Lifecycle"
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "Fleeting Jobs",
+      "type": "Web Application",
+      "status": "Active",
+      "description": "Job discovery and application-assistance platform that collects job postings, generates application materials and provides browser-based assistance for completing job applications.",
+      "technologies": [
+        "SvelteKit",
+        "Spring Boot",
+        "Java",
+        "Python",
+        "FastAPI",
+        "Playwright",
+        "PostgreSQL",
+        "RabbitMQ",
+        "Docker",
+        "OpenAI API"
+      ],
+      "features": [
+        "Job scraping",
+        "Job information extraction",
+        "Resume generation",
+        "Cover letter generation",
+        "Authentication",
+        "Browser extension",
+        "Application form detection",
+        "Application autofill"
+      ]
+    },
+    {
+      "name": "Fleeting Jobs Browser Extension",
+      "type": "Browser Extension",
+      "status": "Active",
+      "description": "Chrome extension designed to detect job application form fields and automatically populate them using a user's Fleeting Jobs profile.",
+      "technologies": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "Chrome Extension APIs",
+        "Manifest V3"
+      ]
+    },
+    {
+      "name": "Fleeting City",
+      "type": "Game",
+      "status": "Active",
+      "description": "Game development project created under H-Fleet.",
+      "technologies": [
+        "Godot",
+        "C#"
+      ]
+    },
+    {
+      "name": "VaneJS",
+      "type": "Open Source Library",
+      "status": "Active",
+      "description": "JavaScript templating engine/library.",
+      "technologies": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Fleeting Offers",
+      "type": "Application",
+      "status": "Prototype",
+      "description": "Application concept for collecting and presenting promotional offers from retailers.",
+      "technologies": [
+        "Web Technologies",
+        "Scraping"
+      ]
+    },
+    {
+      "name": "Splunk + ASP.NET Core Monitoring Lab",
+      "type": "Cybersecurity / SIEM Lab",
+      "status": "Completed",
+      "description": "Security monitoring environment integrating ASP.NET Core application logs with Splunk for security analysis and monitoring.",
+      "technologies": [
+        "ASP.NET Core",
+        "C#",
+        "Splunk",
+        "SPL",
+        "Serilog"
+      ]
+    },
+    {
+      "name": "Enterprise Network Segmentation & Security Architecture",
+      "type": "Cybersecurity Lab",
+      "status": "Completed",
+      "description": "Enterprise network security lab involving network segmentation, firewall policies, VPN, access controls and security monitoring.",
+      "technologies": [
+        "pfSense",
+        "OpenVPN",
+        "Networking",
+        "Firewall",
+        "Access Control"
+      ]
+    },
+    {
+      "name": "TryHackMe Advanced Splunk Case Study",
+      "type": "Cybersecurity Project",
+      "status": "Completed",
+      "description": "Security investigation and SIEM analysis exercise using Splunk.",
+      "technologies": [
+        "Splunk",
+        "SPL",
+        "SIEM"
+      ]
+    },
+    {
+      "name": "Bleam",
+      "type": "Software Application",
+      "status": "Completed",
+      "description": "White-label retail and fintech application.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        ".NET"
+      ]
+    },
+    {
+      "name": "Assure",
+      "type": "Software Application",
+      "status": "Completed",
+      "description": "Single-page loan portal application.",
+      "technologies": [
+        "React",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Sparkle",
+      "type": "Mobile Application",
+      "status": "Completed",
+      "description": "Music application developed as a mobile application.",
+      "technologies": [
+        "React Native",
+        ".NET"
+      ]
+    }
+  ],
+
+  "certifications": [
+    {
+      "name": "TryHackMe Junior Penetration Tester",
+      "issuer": "TryHackMe",
+      "status": "Completed",
+      "date": null
+    }
+  ],
+
+  "research": {
+    "areas": [
+      "Web Scraping",
+      "Web Information Extraction",
+      "Agentic Web Scraping",
+      "Self-Healing Web Scraping",
+      "Bot Detection",
+      "Cybersecurity",
+      "Access Control",
+      "Policy Verification"
+    ],
+    "thesis": {
+      "title": "Bridging the Gap Between Policy and Practice: A Review of Technologies for Access Control Policy Verification and Enforcement",
+      "topics": [
+        "Access Control",
+        "Policy Verification",
+        "Policy Enforcement",
+        "Zanzibar",
+        "AWS Zelkova",
+        "NIST"
+      ]
+    }
+  },
+
+  "additionalExperience": {
+    "customerService": true,
+    "sales": true,
+    "technicalSupport": true,
+    "softwareDevelopment": true,
+    "cybersecurity": true,
+    "networking": true,
+    "linux": true
+  },
+
+  "jobPreferences": {
+    "targetRoles": [
+      "Software Engineer",
+      "Full-Stack Developer",
+      "Frontend Developer",
+      "Backend Developer",
+      "IT Support",
+      "Cybersecurity Analyst",
+      "SOC Analyst"
+    ],
+    "preferredTechnologyAreas": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "C#",
+      ".NET",
+      "Python",
+      "Web Development",
+      "Cybersecurity"
+    ]
+  }
+}

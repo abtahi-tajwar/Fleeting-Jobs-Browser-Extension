@@ -1,35 +1,41 @@
 import type { DetectedField, FormFieldType } from "../shared/types";
 
-export function detectFields(): DetectedField[] {
+export type FormElement =
+  | HTMLInputElement
+  | HTMLTextAreaElement
+  | HTMLSelectElement;
+export interface DetectedDomField {
+  field: DetectedField;
+  element: FormElement;
+}
+const FORM_FIELD_SELECTOR = "input, textarea, select";
+
+export function detectDomFields(): DetectedDomField[] {
   const elements = Array.from(
-    document.querySelectorAll<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >("input, textarea, select"),
+    document.querySelectorAll<FormElement>(FORM_FIELD_SELECTOR),
   );
 
-  return elements.map((element, index) => {
-    return {
+  return elements.map((element, index) => ({
+    field: {
       id: `field-${index}`,
-
       type: getFieldType(element),
-
       name: element.getAttribute("name"),
-
       label: getLabel(element),
-
       placeholder: element.getAttribute("placeholder"),
-
       htmlId: element.getAttribute("id"),
-
       selector: createSelector(element),
-
       value: getValue(element),
-    };
-  });
+    },
+    element,
+  }));
+}
+
+export function detectFields(): DetectedField[] {
+  return detectDomFields().map(({ field }) => field);
 }
 
 function getFieldType(
-  element: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement,
+  element: FormElement,
 ): FormFieldType {
   if (element instanceof HTMLTextAreaElement) {
     return "textarea";
@@ -77,7 +83,7 @@ function getFieldType(
 }
 
 function getLabel(
-  element: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement,
+  element: FormElement,
 ): string | null {
   const id = element.getAttribute("id");
 
