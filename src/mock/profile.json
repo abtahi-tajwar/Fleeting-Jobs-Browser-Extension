@@ -5,7 +5,7 @@
     "fullName": "Abtahi Tajwar",
     "preferredName": "Abtahi",
     "email": "abtahitajwar@gmail.com",
-    "phone": null,
+    "phone": "+1 (437) 955-1053",
     "location": {
       "city": "London",
       "province": "Ontario",
@@ -23,6 +23,12 @@
     "headline": "Software Engineer | Information Security",
     "yearsOfExperience": 3,
     "primaryRole": "Software Engineer",
+    "salary": {
+      "minimum": 70000,
+      "target": 80000,
+      "currency": "CAD",
+      "period": "year"
+    },
     "secondaryAreas": [
       "Full-Stack Development",
       "Cybersecurity",

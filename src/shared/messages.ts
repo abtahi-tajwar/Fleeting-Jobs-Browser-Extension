@@ -1,4 +1,10 @@
-import type { DetectedField } from "./types";
+import type {
+  DetectedField,
+} from "./types";
+
+import type {
+  FormTreeSnapshot,
+} from "../shared/formTree";
 
 export type ExtensionMessage =
   | {
@@ -6,6 +12,9 @@ export type ExtensionMessage =
     }
   | {
       type: "FILL_FORM";
+    }
+  | {
+      type: "EXTRACT_FORM_TREE";
     };
 
 export type ExtensionResponse =
@@ -16,6 +25,10 @@ export type ExtensionResponse =
   | {
       success: true;
       filled: number;
+    }
+  | {
+      success: true;
+      tree: FormTreeSnapshot | null;
     }
   | {
       success: false;

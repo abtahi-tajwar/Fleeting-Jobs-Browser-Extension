@@ -1,0 +1,131 @@
+{
+  "email": {
+    "path": "personal.email",
+    "confidence": 1,
+    "matches": ["email", "email address", "e-mail"],
+    "regex": ["\\b(e[- ]?mail|emailaddress)\\b"]
+  },
+
+  "phone": {
+    "path": "personal.phone",
+    "confidence": 1,
+    "matches": ["phone", "phone number", "telephone", "mobile", "cell"],
+    "regex": [
+      "\\b(phone|telephone|mobile|cell)( number)?\\b",
+      "\\b(phone|tel|mobile)[_-]?(number|no|num)?\\b"
+    ]
+  },
+
+  "firstName": {
+    "path": "personal.firstName",
+    "confidence": 0.98,
+    "matches": ["first name", "firstname", "given name", "forename"],
+    "regex": ["\\b(first|given|fore)[ _-]?name\\b", "^fname$", "^first_name$"]
+  },
+
+  "lastName": {
+    "path": "personal.lastName",
+    "confidence": 0.98,
+    "matches": ["last name", "lastname", "surname", "family name"],
+    "regex": [
+      "\\b(last|family)[ _-]?name\\b",
+      "^surname$",
+      "^lname$",
+      "^last_name$"
+    ]
+  },
+
+  "fullName": {
+    "path": "personal.fullName",
+    "confidence": 0.95,
+    "matches": ["full name", "complete name"],
+    "regex": ["\\b(full|complete)[ _-]?name\\b", "^name$", "^full_name$"]
+  },
+
+  "linkedin": {
+    "path": "personal.linkedin",
+    "confidence": 0.98,
+    "matches": [
+      "linkedin",
+      "linkedin profile",
+      "linkedin url",
+      "linkedin profile url"
+    ],
+    "regex": ["\\blinkedin\\b", "linkedin[_ -]?(profile|url)"]
+  },
+
+  "github": {
+    "path": "personal.github",
+    "confidence": 0.98,
+    "matches": ["github", "github profile", "github url"],
+    "regex": ["\\bgithub\\b", "github[_ -]?(profile|url)"]
+  },
+
+  "portfolio": {
+    "path": "personal.portfolio",
+    "confidence": 0.95,
+    "matches": ["portfolio", "portfolio url", "personal website", "website"],
+    "regex": [
+      "\\b(portfolio|website)\\b",
+      "\\bpersonal[_ -]?website\\b",
+      "\\b(portfolio|personal)[_-]?(url|link|website)\\b"
+    ]
+  },
+
+  "city": {
+    "path": "personal.location.city",
+    "confidence": 0.9,
+    "matches": ["city", "town"],
+    "regex": ["\\b(city|town)\\b", "^(city|town)[_-]?(name)?$"]
+  },
+
+  "province": {
+    "path": "personal.location.province",
+    "confidence": 0.9,
+    "matches": ["province", "state", "state/province", "region"],
+    "regex": [
+      "\\b(province|state|region)\\b",
+      "\\b(state|province)[ _/-]?(province|state)?\\b"
+    ]
+  },
+
+  "country": {
+    "path": "personal.location.country",
+    "confidence": 0.9,
+    "matches": ["country", "country of residence"],
+    "regex": ["\\bcountry\\b", "\\bcountry[ _-]?of[ _-]?residence\\b"]
+  },
+
+  "postalCode": {
+    "path": "personal.postalCode",
+    "confidence": 0.95,
+    "matches": ["postal code", "zip code", "zipcode", "zip"],
+    "regex": [
+      "\\b(postal|zip)[ _-]?(code|number|no)?\\b",
+      "^postal_code$",
+      "^zip_code$"
+    ]
+  },
+
+  "salary": {
+    "path": "professional.salary",
+    "confidence": 0.9,
+    "matches": [
+      "salary",
+      "expected salary",
+      "desired salary",
+      "salary expectation",
+      "salary expectations",
+      "expected compensation",
+      "desired compensation",
+      "compensation expectation",
+      "pay expectation",
+      "desired pay"
+    ],
+
+    "regex": [
+      "\\b(salary|compensation|pay)[ _-]?(expectation|expected|desired)?\\b",
+      "\\b(expected|desired)[ _-]?(salary|compensation|pay)\\b"
+    ]
+  }
+}

@@ -1,10 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { DetectedField } from "../shared/types";
 
 export default function App() {
   const [fields, setFields] = useState<DetectedField[]>([]);
   const [hasScanned, setHasScanned] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    extractFormTree();
+  }, []);
+
+  async function extractFormTree() {
+    try {
+      const [tab] = await chrome.tabs.query({
+        active: true,
+        currentWindow: true,
+      });
+
+      if (!tab.id) {
+        throw new Error("No active tab.");
+      }
+
+      const response = await chrome.tabs.sendMessage(tab.id, {
+        type: "EXTRACT_FORM_TREE",
+      });
+
+      if (!response?.success) {
+        throw new Error(response?.error ?? "Extraction failed.");
+      }
+
+      console.log("🌳 Extracted form tree:", response.tree);
+    } catch (error) {
+      console.error("❌ Extraction pipeline failed:", error);
+    }
+  }
 
   const [status, setStatus] = useState<
     "idle" | "scanning" | "filling" | "success" | "error"
@@ -29,9 +58,7 @@ export default function App() {
       });
 
       if (!response?.success) {
-        throw new Error(
-          response?.error ?? "Unable to detect fields.",
-        );
+        throw new Error(response?.error ?? "Unable to detect fields.");
       }
 
       setFields(response.fields);
@@ -64,9 +91,7 @@ export default function App() {
       });
 
       if (!response?.success) {
-        throw new Error(
-          response?.error ?? "Unable to autofill form.",
-        );
+        throw new Error(response?.error ?? "Unable to autofill form.");
       }
 
       console.log(`Filled ${response.filled} fields`);
@@ -116,8 +141,7 @@ export default function App() {
                 ? "bg-emerald-500"
                 : status === "error"
                   ? "bg-red-500"
-                  : status === "filling" ||
-                      status === "scanning"
+                  : status === "filling" || status === "scanning"
                     ? "animate-pulse bg-amber-500"
                     : "bg-zinc-400"
             }`}
@@ -138,8 +162,8 @@ export default function App() {
         </h2>
 
         <p className="mt-2 text-xs leading-relaxed text-zinc-500">
-          Detect application fields and populate them from
-          your Fleeting Jobs profile.
+          Detect application fields and populate them from your Fleeting Jobs
+          profile.
         </p>
 
         {/* Primary action */}
@@ -169,9 +193,7 @@ export default function App() {
           disabled={loading}
           className="mt-2.5 flex h-10 w-full items-center justify-center rounded-xl border border-zinc-200 bg-white text-xs font-semibold text-zinc-700 shadow-sm transition hover:bg-zinc-100 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50"
         >
-          {status === "scanning"
-            ? "Scanning..."
-            : "Scan Form Fields"}
+          {status === "scanning" ? "Scanning..." : "Scan Form Fields"}
         </button>
       </section>
 
@@ -211,8 +233,7 @@ export default function App() {
             </strong>
 
             <span className="mt-1 max-w-[220px] text-[10px] leading-relaxed text-zinc-400">
-              Scan the current page to find application
-              fields.
+              Scan the current page to find application fields.
             </span>
           </div>
         ) : fields.length === 0 ? (
@@ -227,8 +248,7 @@ export default function App() {
             </strong>
 
             <span className="mt-1 max-w-[220px] text-[10px] leading-relaxed text-zinc-400">
-              We couldn't find any application fields on
-              this page.
+              We couldn't find any application fields on this page.
             </span>
           </div>
         ) : (
@@ -257,9 +277,7 @@ export default function App() {
                 </div>
 
                 {/* Detected indicator */}
-                <span className="text-xs text-zinc-300">
-                  ✓
-                </span>
+                <span className="text-xs text-zinc-300">✓</span>
               </article>
             ))}
           </div>

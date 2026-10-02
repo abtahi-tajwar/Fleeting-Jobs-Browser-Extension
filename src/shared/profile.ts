@@ -26,6 +26,12 @@ export interface UserProfile {
     yearsOfExperience: number | null;
     primaryRole: string | null;
     secondaryAreas: string[];
+    salary: {
+      minimum: number | null;
+      target: number | null;
+      currency: string | null;
+      period: string | null;
+    };
   };
 
   employment: Array<{

@@ -1,9 +1,9 @@
 import type { UserProfile } from "../shared/profile";
-import { mapField } from "./field-mapper";
+import { mapField } from "./filedMapper";
 import {
   detectDomFields,
   type FormElement,
-} from "./field-detector";
+} from "./fieldDetectors";
 
 export interface FillResult {
   fieldId: string;
